@@ -11,7 +11,7 @@ public class KafkaTopicConfig {
 
     @Bean
     public NewTopic newTopic() {
-        return TopicBuilder.name(TopicEnum.KAFKA_TOPIC_NAME.getName())
+        return TopicBuilder.name(TopicEnum.KAFKA_TOPIC_STRING_NAME.getName())
                 .build();
     }
 

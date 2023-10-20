@@ -12,8 +12,8 @@ public class ConsumerService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerService.class);
 
-    @KafkaListener(topics = TopicEnum.Constants.NAME, groupId = "myGroup")
-    public void consume(String message) {
+    @KafkaListener(topics = TopicEnum.Constants.KAFKA_STRING_NAME, groupId = "myGroup")
+    public void stringConsume(String message) {
         LOGGER.info(String.format("Message received -> %s", message));
     }
 
