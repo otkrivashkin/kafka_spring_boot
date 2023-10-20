@@ -1,6 +1,6 @@
 package com.bin.bonigo.springbootkafka.kafka;
 
-import com.bin.bonigo.springbootkafka.enums.TopicName;
+import com.bin.bonigo.springbootkafka.enums.TopicEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +17,6 @@ public class ProducerService {
 
     public void sendMessage(String message) {
         LOGGER.info(String.format("Sent message %s", message));
-        template.send(TopicName.KAFKA_TOPIC_NAME.getName(), message);
+        template.send(TopicEnum.KAFKA_TOPIC_NAME.getName(), message);
     }
 }
